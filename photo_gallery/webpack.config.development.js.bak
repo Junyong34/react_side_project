@@ -1,0 +1,71 @@
+
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const port = process.env.PORT || 3000;
+
+module.exports = {
+    mode: 'development',
+    entry: {
+        vendor: ['semantic-ui-react'],
+        app: './src/index.js',
+    },
+    output: {
+        publicPath: '/',  // 중첩된 경로는 허용 X
+        // filename: 'bundle.[hash].js'
+        filename: '[name].[hash].js', // 청크네임 기준으로 빌드
+    },
+    devtool: 'inline-source-map',
+    module: {
+        rules: [
+            {
+                test: /\.(js)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            // camelCase: true,
+                            localsConvention: "camelCase",
+                            sourceMap: true
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    chunks: 'initial',
+                    test: 'vendor',
+                    name: 'vendor',
+                    enforce: true
+                }
+            }
+        }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(), // HMR 업데이트시 브라우저 터미널에 표시해 알아보기 쉽게 한다.
+        new HtmlWebpackPlugin({
+            template: 'public/index.html',
+            favicon: 'public/favicon.ico'
+        })
+    ],
+    devServer: {
+        host: 'localhost',
+        port: port,
+        historyApiFallback: true,
+        hot: true, // hot module를 하겠다. 서버에 HMR 작동을 허락한다.
+        open: true
+    }
+};
