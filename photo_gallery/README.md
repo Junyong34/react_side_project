@@ -31,3 +31,10 @@ webpack-cli: Webpack 4.0.1 이상에서 필요한 커맨드라인 인터페이
 webpack-dev-server: 애플리케이션 개발 서버를 제공한다.
 "extract-text-webpack-plugin": "^4.0.0-beta.0", // 별도 css파일로 뺴낸다.
 ```
+```
+npx eslint -init
+초기 셋팅후
+
+yarn add -D @types/react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react-hooks
+prettier eslint-config-airbnb
+```
