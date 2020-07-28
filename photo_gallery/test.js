@@ -10,8 +10,8 @@ function good() {
 const bad = function () {
 	console.log('bad');
 };
-const a = x => console.log(1);
 
+const a = x => console.log(1);
 // good
 
 const aaabb = {
@@ -24,7 +24,6 @@ const aaabb = {
 			},
 		},
 	},
-
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',

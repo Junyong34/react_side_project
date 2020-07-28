@@ -9,11 +9,11 @@ module.exports = {
 	extends: [
 		'airbnb',
 		'prettier',
-		"prettier/react",
+		'prettier/react',
 		'plugin:react/recommended',
 		'plugin:prettier/recommended',
 		// "eslint-config-prettier"
-		"plugin:jsx-a11y/recommended",
+		'plugin:jsx-a11y/recommended',
 	],
 	parserOptions: {
 		parser: 'babel-eslint',
@@ -22,26 +22,26 @@ module.exports = {
 		},
 		ecmaVersion: 11,
 	},
-	plugins: ['react', 'prettier'],
+	plugins: ['react'],
 	rules: {
-		'prettier/prettier': [
-			'error',
-			// 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
-			// https://prettier.io/docs/en/options.html
-			{
-				arrowParens: 'avoid', // "<always|avoid>"
-				singleQuote: true,
-				semi: true,
-				useTabs: true,
-				tabWidth: 4,
-				trailingComma: 'all',
-				printWidth: 100,
-				jsxSingleQuote: true, // JSX에서 singleQuote or doubleQuote
-				endOfLine: "lf",
-				bracketSpacing: true, // 객체리터럴에서 { } 사이에 공백을 넣을 것인지
-				jsxBracketSameLine: false, // 여러줄의 JSX 요소가 있을때, > 를 마지막 줄의 끝부분에서 닫을 것인지
-			},
-		],
+		// 'prettier/prettier': [
+		// 	'error',
+		// 	// 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
+		// 	// https://prettier.io/docs/en/options.html
+		// 	{
+		// 		arrowParens: 'avoid', // "<always|avoid>"
+		// 		singleQuote: true,
+		// 		semi: true,
+		// 		useTabs: true,
+		// 		tabWidth: 4,
+		// 		trailingComma: 'all',
+		// 		printWidth: 100,
+		// 		jsxSingleQuote: true, // JSX에서 singleQuote or doubleQuote
+		// 		endOfLine: "lf",
+		// 		bracketSpacing: true, // 객체리터럴에서 { } 사이에 공백을 넣을 것인지
+		// 		jsxBracketSameLine: false, // 여러줄의 JSX 요소가 있을때, > 를 마지막 줄의 끝부분에서 닫을 것인지
+		// 	},
+		// ],
 		// // indent: 'off',
 		// // Indent with 4 spaces
 		// "indent": ["error", 4],
@@ -50,7 +50,7 @@ module.exports = {
 		// "react/jsx-indent": ["error", 4],
 		// // Indent props with 4 spaces
 		// "react/jsx-indent-props": ["error", 4],
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 		// // 'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		// // 'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		// // "@typescript-eslint/no-var-requires": "off",
@@ -194,10 +194,7 @@ module.exports = {
 		// // "no-unsafe-finally": "error", // finally 블록에서 제어 흐름 명령문을 허용하지 않음.
 		// // "no-unsafe-negation": "error", // 관계 연산자의 왼쪽 피연산자를 무효화하는 것을 허용하지 않음.
 		// // "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true, "allowTaggedTemplates": true }], // 사용되지 않는 표현식 금지.
-		'no-unused-vars': [
-			'error',
-			{ vars: 'all', args: 'none', ignoreRestSiblings: true },
-		], // 사용하지 않는 변수 금지.
+		'no-unused-vars': ['error', { vars: 'all', args: 'none', ignoreRestSiblings: true }], // 사용하지 않는 변수 금지.
 		// // "no-use-before-define": ["error", { "functions": false, "classes": false, "variables": false }], // 변수와 함수를 선언전에 사용 금지.
 		// // "no-useless-call": "error", // 불필요한 .call() 및 .apply()를 금지.
 		// // "no-useless-computed-key": "error", // 객체에서 불필요한 계산 된 속성 키를 허용하지 않음.
