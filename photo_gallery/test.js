@@ -1,15 +1,20 @@
-// bad
-const bad = function () {
-	console.log('bad');
-};
-const a = (x) => console.log(1);
+const bar = function () {};
 
-// good
+const bar2 = function () {};
 
 function good() {
 	console.log('good');
 }
-const aaa = {
+
+// bad
+const bad = function () {
+	console.log('bad');
+};
+const a = x => console.log(1);
+
+// good
+
+const aaabb = {
 	ddd: {
 		aaa: {
 			aaad: {
