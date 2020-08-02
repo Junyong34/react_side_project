@@ -1,5 +1,5 @@
 import React from 'react';
-import {List} from 'semantic-ui-react';
+import { List } from 'semantic-ui-react';
 
 const Features = () => {
 	const list = [
@@ -22,7 +22,7 @@ const Features = () => {
 				<List.Item key={item}>
 					<List.Icon name='checkmark' />
 					<List.Content>
-						<span dangerouslySetInnerHTML={{__html: item}} />
+						<span dangerouslySetInnerHTML={{ __html: item }} />
 					</List.Content>
 				</List.Item>
 			))}

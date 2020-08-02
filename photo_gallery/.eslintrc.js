@@ -24,6 +24,7 @@ module.exports = {
 	},
 	plugins: ['react'],
 	rules: {
+		'react/prop-types': 0, // [<enabled>, { ignore: <ignore>, customValidators: <customValidator>, skipUndeclared: <skipUndeclared> }],
 		// 'prettier/prettier': [
 		// 	'error',
 		// 	// 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
@@ -62,17 +63,21 @@ module.exports = {
 				peerDependencies: true,
 			},
 		],
-		// // "import/extensions": [".js", ".jsx"],
+		'import/extensions': [
+			'error',
+			'ignorePackages',
+			{ js: 'never', mjs: 'never', jsx: 'never' },
+		],
 		'no-console': 'off',
 		'no-debugger': 'off',
 		// // indent: 'off',
 		// 'linebreak-style': 0,
 		// 'import/no-unresolved': 'off',
-		// // "arrow-body-style": ["error", "never"],
+		// 'arrow-body-style': ['error', 'never'],
 		// // https://eslint.org/docs/rules/{rules}
 		// 'no-nested-ternary': 'off',
 		// // "accessor-pairs": "error",  // 객체 getter, setter를 쌍으로 적용.
-		// // "arrow-spacing": ["error", { "before": true, "after": true }],  // arrow함수 에서 화살표 앞뒤에 공간 설정.
+		'arrow-spacing': ['error', { before: true, after: true }], // arrow함수 에서 화살표 앞뒤에 공간 설정.
 		// // "block-spacing": ["error", "always"],   // 블록 간격을 설정 always 하나 이상의 공백이 필요, never 공백을 허용하지 않는다.
 		// // "brace-style": ["error", "1tbs", { "allowSingleLine": true }], // 중괄호 스타일 설정.
 		// camelcase: ['error', { properties: 'never', ignoreDestructuring: true }], // 변수 이름을 지정할 때 스타일 가이드.
@@ -215,14 +220,14 @@ module.exports = {
 		// // "semi": ["error", "never"], // ASI(semi) 대신에 세미콜론을 금지.
 		// // "semi-spacing": ["error", { "before": false, "after": true }], // 세미콜론 전후에 간격을 둔다.
 		// // "space-before-blocks": ["error", "always"], // 블록 앞에 공백 필요 / 불허 하기.
-		// 'space-before-function-paren': [
-		// 	'error',
-		// 	{
-		// 		anonymous: 'always',
-		// 		named: 'never',
-		// 		asyncArrow: 'always',
-		// 	},
-		// ], // 함수 괄호 앞에 공백이 필요하거나 허용되지 않는다.
+		'space-before-function-paren': [
+			'error',
+			{
+				anonymous: 'always',
+				named: 'never',
+				asyncArrow: 'always',
+			},
+		], // 함수 괄호 앞에 공백이 필요하거나 허용되지 않는다.
 		// // "space-in-parens": ["error", "never"], // 괄호 안의 공백을 허용 여부.
 		// // "space-infix-ops": "error", // 중위 연산자 주위에 공백이 필요.
 		// // "space-unary-ops": ["error", { "words": true, "nonwords": false }], // 단항 연산자의 전후에 공백 필요 또는 비 허용.
@@ -256,12 +261,12 @@ module.exports = {
 		// // "standard/computed-property-even-spacing": ["error", "even"],
 		// // "standard/no-callback-literal": "error",
 		// // "standard/object-curly-even-spacing": ["error", "either"],
-		// 'no-confusing-arrow': [
-		// 	'off',
-		// 	{
-		// 		allowParens: false,
-		// 	},
-		// ], // 비교와 혼동 될 수 있는 화살표 기능 중 단일 인수는 허용한다.
+		'no-confusing-arrow': [
+			'off',
+			{
+				allowParens: false,
+			},
+		], // 비교와 혼동 될 수 있는 화살표 기능 중 단일 인수는 허용한다.
 		// 'array-element-newline': ['error', 'consistent'], // 배열 요소 간에 일관된 줄바꿈을 허용한다.
 	},
 };
