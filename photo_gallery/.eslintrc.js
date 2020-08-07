@@ -65,8 +65,13 @@ module.exports = {
 		],
 		'import/extensions': [
 			'error',
-			'ignorePackages',
-			{ js: 'never', mjs: 'never', jsx: 'never' },
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
 		],
 		'no-console': 'off',
 		'no-debugger': 'off',

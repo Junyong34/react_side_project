@@ -15,6 +15,7 @@ const config = {
 		alias: {
 			'react-dom': '@hot-loader/react-dom',
 		},
+		// extensions: ['', '.js', '.json', '.jsx'],
 	},
 	devtool: 'inline-source-map',
 	module: {

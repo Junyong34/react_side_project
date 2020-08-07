@@ -18,7 +18,8 @@ const config = {
 			// 	use: ['babel-loader'],
 			// },
 			{
-				test: /\.js$/, // .js, .jsx로 끝나는 babel이 컴파일하게 할 모든 파일
+				// test: /\.js$/, // .js, .jsx로 끝나는 babel이 컴파일하게 할 모든 파일
+				test: /\.(js|mjs|jsx|ts|tsx)$/,
 				// test: /.(js|jsx)$/, // .js, .jsx로 끝나는 babel이 컴파일하게 할 모든 파일
 				exclude: /node_module/, // node module 폴더는 babel 컴파일에서 제외
 				use: {
@@ -26,6 +27,10 @@ const config = {
 				},
 			},
 		],
+	},
+	resolve: {
+		extensions: ['.es6', '.js', '.jsx'],
+		modules: ['node_modules'],
 	},
 	optimization: {
 		splitChunks: {
