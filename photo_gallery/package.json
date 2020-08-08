@@ -11,6 +11,7 @@
     "build:bundleanalyzer": "yarn build -- --env.addons=bundleanalyzer"
   },
   "dependencies": {
+    "eslint-plugin-flowtype": "^5.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-delay-render": "^0.1.2",

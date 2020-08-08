@@ -7,7 +7,7 @@ const CountFC = () => {
 	const dispatch = useDispatch();
 	const [localCount, setLocalCount] = useState(0);
 
-	const { count: storeCount } = useSelector(state => state.count);
+	const { count: storeCount } = useSelector(state => state);
 
 	useEffect(() => {
 		console.log('Component did mount.');

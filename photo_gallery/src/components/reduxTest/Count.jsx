@@ -57,12 +57,6 @@ class Count extends React.Component {
 						this.decreaseCount();
 						decreaseStoreCount();
 					}}
-					onKeyDown={() => {
-						this.decreaseCount();
-						decreaseStoreCount();
-					}}
-					role='button'
-					tabIndex={-1}
 				>
 					-
 				</div>
@@ -72,7 +66,7 @@ class Count extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	storeCount: state.count.count,
+	storeCount: state.count,
 });
 
 const mapDispatchToProps = dispatch => ({
