@@ -4,6 +4,7 @@ export const DECREASE_COUNT = 'count/DECREASE_COUNT';
 
 export const SET_COUNT = 'count/SET_COUNT';
 
+// 커밋
 // Action creators
 export const increaseCount = () => {
 	return {
